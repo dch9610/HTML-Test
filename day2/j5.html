@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document5</title>
+    <script>
+        function fn(){
+            console.log("fn call")
+        }
+        fn()
+        fn()
+        fn()
+
+        function hap(a,b){
+            return a+b
+        }
+        rst=hap(10,20)
+        console.log(rst)
+
+        arr=[{name:'홍길동',age:20},
+            {name:'이길동',age:30},
+            {name:'고길동',age:40}]
+        console.log(arr[0])
+        for(n in arr){
+            console.log(n)
+        }
+        for(n of arr){ //array에 속한 json은 of로 값 출력 가능
+            console.log(n,n.name,n.age)
+        }
+        console.log("================")
+        
+        // 콜백함수, 해당 함수의 값을 출력
+        arr.forEach((v,i)=>{
+            console.log("v=",v.name,"i=",i)
+        }) //lamda식
+
+        // arr.forEach(function(v,i){
+        //     console.log("v=",v.name,"i=",i)
+        // })
+
+        // function arrfn(v,i){
+        //     console.log("v=",v.name,"i=",i)
+        // }
+
+        // arrfn=function(v,i){
+        //    console.log("v=",v.name,"i=",i)
+        //}
+        // arr.forEach(arrfn) 
+        console.log("================")
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

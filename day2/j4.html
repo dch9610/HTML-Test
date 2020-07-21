@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document4</title>
+    <script>
+        n=1
+        while(n<=5)
+        {
+            console.log("n=",n)
+            n++ // 파이썬에서는 n+=1
+        }
+
+        for(j=1; j<=5; j++)
+        {
+            console.log("j=",j)
+        }
+
+        my =[10,20,30,40,50]
+        console.log(my[0])
+
+        // for n in my: --파이썬
+        for(n in my){ // in은 인덱스
+            console.log(n) // my[n]으로 하면 값이 나옴
+        } // 자바에서는 인덱스가 찍힘
+        console.log("===========")
+
+        for (n of my){ // of는 값이 나옴
+            console.log(n)
+        }
+        console.log("===========")
+
+        j={"a":10,"b":20,"c":30}
+        console.log(j['a'],j.a)
+        for(n in j) // in은 사용가능 하나 of는 array에만 가능
+        {
+            console.log(n,j[n]) // n은 키값, j[n]은 결과값
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

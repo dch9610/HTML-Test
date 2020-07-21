@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        bimanResult = ""
+        function calcObesityFn(height, weight)
+        {
+            stdWeight =  ((height-100)*0.85)
+            obesity = weight/stdWeight*100
+            if( obesity <= 90 ){
+                return "저체중"
+            }
+            else if( obesity <= 110 ){
+                return "정상체중"
+            }
+            else if( obesity <= 120 ){
+                return "과체중"
+            }
+            else{
+                return "비만"
+            }
+        }
+        function fn()
+        {
+            height = $('#h').val()
+            height = Number(height) 
+            weight = $("#w").val()
+            weight = Number(weight)
+            rst = calcObesityFn( height, weight )
+            $('.he').text(height),
+            $('.we').text(weight),
+            $('.re').text(rst)
+            $('img').attr('src', 'image/'+rst+'.jpg' )
+        }
+
+           
+    </script>
+</head>
+<body>
+
+    <h1><b>비만도 측정</b></h1>
+    <label>키</label>
+    <input id="h"  type="number" ><br> 
+
+    <label>몸무게</label>
+    <input id="w" type="number" ><br>
+    <br>
+    <button onclick="fn()">결과</button>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">    
+            <div class="he">키</div>
+            <div class="we">몸무게</div>
+            <div class="re">결과</div>
+        </div>
+
+    <div class="col-sm-8">
+        <img src="image/정상체중.jpg" name="img" width="300" height="400"><br>
+    </div>
+
+</body>
+</html>

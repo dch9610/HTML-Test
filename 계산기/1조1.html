@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        function fn() {
+            standard = (Number($('#height').val()) - 100) * 0.85;
+            fatrate = (Number($('#weight').val()) / standard) * 100
+            if (fatrate <= 90) {
+                res = "저체중"
+            } else if (fatrate > 90 && fatrate <= 110) {
+                res = "정상"
+            } else if (fatrate > 110 && fatrate <= 120) {
+                res = "과체중"
+            } else {
+                res = "비만"
+            }
+
+            $('.h').html('키 : ' + Number($('#height').val()));
+            $('.w').html('몸무게 : ' + Number($('#weight').val()));
+            $('.r').html('결과 : ' + res);
+
+        }
+    </script>
+    <style>
+        div {
+
+            width: 200px;
+
+            padding: 10px;
+
+            border: 3px solid black;
+
+            margin: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <label>키 : </label>
+    <input id="height" type="number"><br>
+    <label>몸무게 : </label>
+    <input id="weight" type="number"><br>
+    <p>결과</p>
+    <div id="first">
+        <p class='h'></p>
+        <p class='w'></p>
+        <p class='r'></p>
+    </div>
+
+
+    <button type onclick="fn()">확인</button>
+</body>
+
+</html>

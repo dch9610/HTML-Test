@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        result=''
+        function fn(e) {
+            // alert($(e).text())
+            rst=$(e).text()
+            result+=rst
+            $('#Cal').val(result)
+            console.log(result,typeof(result))           
+        }
+        
+        function fs(e){
+            result = eval(result);
+            $('#Cal').val(result)
+
+        }
+        
+        function fd(e){
+            result = '';
+            $('#Cal').val(result)
+
+        }
+        
+    </script>
+</head>
+<body>
+    <label></label>
+    <input id="Cal" type="text"><br>
+    <button id='num1' onclick="fn(this)"style="font-size: 24px;">1</button>
+    <button id='num2' onclick="fn(this)"style="font-size: 24px;">2</button>
+    <button id='num3' onclick="fn(this)" style="font-size: 24px;">3</button>
+    <button onclick="fn(this)" style="font-size: 24px;">+</button><br>
+    <button id='num4' onclick="fn(this)"style="font-size: 24px;">4</button>
+    <button id='num5' onclick="fn(this)"style="font-size: 24px;">5</button>
+    <button id='num6' onclick="fn(this)"style="font-size: 24px;">6</button>
+    <button onclick="fn(this)"style="font-size: 24px;">-</button><Br>
+    <button id='num7' onclick="fn(this)"style="font-size: 24px;">7</button>
+    <button id='num8' onclick="fn(this)"style="font-size: 24px;">8</button>
+    <button id='num9' onclick="fn(this)"style="font-size: 24px;">9</button>
+    <button onclick="fn(this)"style="font-size: 24px;">*</button><br>
+    <button onclick="fn(this)"style="font-size: 24px;">0</button>
+    <button onclick="fd(this)"style="font-size: 24px;">c</button>
+    <button onclick="fs(this)"style="font-size: 24px;">=</button>
+    <button onclick="fn(this)"style="font-size: 24px;">/</button>
+</body>
+</html>

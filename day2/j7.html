@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document7</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script>
+
+        function fn(){
+            // $('div').text('helo') //div부분 전체가 바뀜
+            // $('#myid').text('helo00') //id 속성의 값이 myid인것
+            // $('.myc').text('korea') //class 속성의 값이 myc인것
+
+            rst=$(".myc").text() // myc 클래스의 값만 반환
+            alert(rst ) //rst의 값을 나타내줌
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Title1</h1>
+    <h2 class="myc">Title2</h2>
+    <div id="myid">Test0</div>
+    <div>Test1</div>
+    <div>Test2</div> 
+
+    <button onclick="fn()">
+        확인
+    </button>
+</body>
+</html>

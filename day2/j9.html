@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document9</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function fn(){
+           // $('#myname').val('hello') //input 빈칸에 hello가 들어감
+           v=$('#myname').val() // 내가 쓴 글자를 반환
+           console.log(v,typeof(v)) // 반환한것을 출력
+
+        //  $('#myage').val(100) // 해당 id에 주어진 값을 저장
+           n=$('#myage').val() // 내가 쓴 글자를 반환
+           n=Number(n)
+           console.log(n,typeof(n))
+        }
+    </script>
+
+</head>
+
+<body>
+    <label >이름</label> <!--label은 input 앞에 내용을 설명할때 자주 사용-->
+    <input id='myname' type="text" value="aa"> <br> <!--input 값 빈칸의 값이 aa로 저장-->
+    <label>나이</label>
+    <input id='myage' type='number'><br>
+    <button onclick="fn()"> 확인</button>
+</body>
+</html>

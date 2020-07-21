@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function fn(){
+            n=$('#myn1').val()
+            n=Number(n)
+            console.log(n)
+
+            v=$('#myn2').val()
+            v=Number(v)
+            console.log(v)
+
+            $('#sum1').val(n+v)
+            sum=n+v
+            sum=$('#sum1').val()
+            console.log(sum)
+        }
+    </script>
+</head>
+
+<body>
+    <label><b>숫자1: </b></label>
+    <input id='myn1' type="number" > <br>
+
+    <label><b>숫자2: </b></label>
+    <input id='myn2' type="number" > <br>
+
+    <label><b>결과값: </b></label>
+    <input id='sum1' type="text"> <br>
+
+    <button onclick="fn()" style="font-size:24px";><b>계산</b></button>
+    
+</body>
+</html>
